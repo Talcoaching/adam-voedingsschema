@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Voedingsschema Adam - tal&coaching</title>
+<style>
+:root{--g:#2D4A3E;--c:#FDFBF3;--o:#C97B1A;--t:#2A7A8C;--b:#ddd8cc;--m:#6b7c76;--w:#fff}
+*{box-sizing:border-box} body{margin:0;background:var(--c);color:var(--g);font-family:Arial,sans-serif;line-height:1.55}
+header{background:var(--g);color:white;text-align:center;padding:34px 18px 28px;border-bottom:4px solid var(--o)}
+h1{margin:0;font-size:34px} header p{margin:8px 0 0;color:#d9e1dd}
+.pills{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin-top:16px}.pill{border:1px solid #ffffff33;border-radius:30px;padding:6px 12px;font-size:12px}.pill b{color:#f1a33d}
+main{max-width:760px;margin:auto;padding:20px 14px 60px}
+.note{background:white;border:1px solid var(--b);border-left:4px solid var(--t);padding:16px;border-radius:0 12px 12px 0;margin-bottom:18px}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:18px 0}.tab{border:1px solid var(--b);background:white;color:var(--g);padding:11px 6px;border-radius:10px;font-weight:700;cursor:pointer}.tab.active{background:var(--g);color:white}
+.day{display:none}.day.active{display:block}.daytitle{font-size:22px;margin:22px 0 12px}
+.meal{background:white;border:1px solid var(--b);border-radius:14px;overflow:hidden;margin:12px 0}.mh{background:var(--g);color:white;padding:11px 14px;display:flex;justify-content:space-between;gap:12px}.mh b{font-size:15px}.kcal{font-size:12px;color:#dce4e0;white-space:nowrap}.body{padding:14px}
+.row{display:flex;justify-content:space-between;gap:14px;border-bottom:1px solid #eee8dc;padding:5px 0;font-size:13px}.row:last-child{border:0}.amt{color:var(--m);white-space:nowrap;font-weight:600}
+.prep{margin-top:10px;background:#eef7f9;color:#245d69;padding:9px 10px;border-radius:8px;font-size:12px}
+.total{background:var(--g);color:white;border-radius:12px;padding:14px 16px;margin:16px 0;font-weight:700;display:flex;justify-content:space-between}.total span:last-child{color:#f1a33d}
+.flex{background:white;border:1px solid var(--b);border-left:4px solid var(--o);border-radius:0 14px 14px 0;padding:16px;margin-top:28px}.flex h2{margin:0 0 8px;font-size:20px}.small{font-size:12px;color:var(--m)}
+footer{text-align:center;background:var(--g);color:#ffffff77;padding:16px;font-size:12px}
+</style>
+</head>
+<body>
+<header>
+<h1>Voedingsschema Adam</h1>
+<p>3 praktische dagen · cutfase</p>
+<div class="pills"><div class="pill"><b>±2200</b> kcal</div><div class="pill"><b>±160 g</b> eiwit</div><div class="pill">86 kg · 188 cm · 20 jaar</div></div>
+</header>
+<main>
+<div class="note">De calorieën zijn richtwaarden: merken, porties en bereidingswijze kunnen verschillen.</div>
+<div class="tabs">
+<button class="tab active" onclick="showDay(0)">Dag 1</button>
+<button class="tab" onclick="showDay(1)">Dag 2</button>
+<button class="tab" onclick="showDay(2)">Dag 3</button>
+</div>
+
+<section class="day active">
+<h2 class="daytitle">Dag 1</h2>
+<div class="meal"><div class="mh"><b>Ontbijt · Kwark bowl</b><span class="kcal">±550 kcal</span></div><div class="body">
+<div class="row"><span>Magere kwark</span><span class="amt">300 g</span></div><div class="row"><span>Havermout</span><span class="amt">50 g</span></div><div class="row"><span>Banaan</span><span class="amt">1 stuk</span></div><div class="row"><span>Pindakaas</span><span class="amt">15 g</span></div><div class="row"><span>Kaneel</span><span class="amt">naar smaak</span></div>
+<div class="prep">Alles in een kom mengen. Eventueel een klein scheutje water of melk toevoegen.</div></div></div>
+<div class="meal"><div class="mh"><b>Lunch · Kipwraps</b><span class="kcal">±600 kcal</span></div><div class="body">
+<div class="row"><span>Volkoren wraps</span><span class="amt">2 stuks</span></div><div class="row"><span>Kipfilet</span><span class="amt">150 g</span></div><div class="row"><span>Light kaas</span><span class="amt">30 g</span></div><div class="row"><span>Sla, tomaat, komkommer</span><span class="amt">ruim</span></div><div class="row"><span>Light knoflooksaus</span><span class="amt">kleine portie</span></div>
+<div class="prep">Kip kruiden en bakken. Wraps vullen met kip, groente, kaas en saus.</div></div></div>
+<div class="meal"><div class="mh"><b>Avond · Kip teriyaki rijst</b><span class="kcal">±650 kcal</span></div><div class="body">
+<div class="row"><span>Kipfilet</span><span class="amt">150 g</span></div><div class="row"><span>Rijst, ongekookt</span><span class="amt">75 g</span></div><div class="row"><span>Wokgroente</span><span class="amt">300 g</span></div><div class="row"><span>Teriyakisaus</span><span class="amt">±30 g</span></div>
+<div class="prep">Rijst koken. Kip en groenten bakken en met de teriyakisaus mengen.</div></div></div>
+<div class="meal"><div class="mh"><b>Snack · Protein pudding + fruit</b><span class="kcal">±350–400 kcal</span></div><div class="body">
+<div class="row"><span>Protein pudding</span><span class="amt">1 portie</span></div><div class="row"><span>Fruit</span><span class="amt">1–2 stuks</span></div>
+<div class="prep">Gebruik de verpakking om de exacte calorieën in je dagtotaal te controleren.</div></div></div>
+<div class="total"><span>Dagtotaal</span><span>±2200 kcal</span></div>
+</section>
+
+<section class="day">
+<h2 class="daytitle">Dag 2</h2>
+<div class="meal"><div class="mh"><b>Ontbijt · Eieren op brood</b><span class="kcal">±550 kcal</span></div><div class="body">
+<div class="row"><span>Eieren</span><span class="amt">3 stuks</span></div><div class="row"><span>Volkoren brood</span><span class="amt">3 sneetjes</span></div><div class="row"><span>Kipfiletbeleg</span><span class="amt">ruime portie</span></div><div class="row"><span>Fruit</span><span class="amt">1 stuk</span></div>
+<div class="prep">Eieren bakken of koken. Serveren met brood, kipfiletbeleg en fruit.</div></div></div>
+<div class="meal"><div class="mh"><b>Lunch · Broodje kip-pesto</b><span class="kcal">±650 kcal</span></div><div class="body">
+<div class="row"><span>Volkoren afbakbroodjes</span><span class="amt">2 stuks</span></div><div class="row"><span>Kipfilet</span><span class="amt">150 g</span></div><div class="row"><span>Pesto</span><span class="amt">15 g</span></div><div class="row"><span>Mozzarella light</span><span class="amt">portie</span></div><div class="row"><span>Rucola & tomaat</span><span class="amt">ruim</span></div>
+<div class="prep">Kip bakken. Broodjes beleggen met kip, pesto, mozzarella, rucola en tomaat.</div></div></div>
+<div class="meal"><div class="mh"><b>Avond · Pasta bolognese</b><span class="kcal">±650 kcal</span></div><div class="body">
+<div class="row"><span>Volkoren pasta, ongekookt</span><span class="amt">75 g</span></div><div class="row"><span>Mager rundergehakt</span><span class="amt">150 g</span></div><div class="row"><span>Passata</span><span class="amt">ruim</span></div><div class="row"><span>Italiaanse groenten</span><span class="amt">ruim</span></div><div class="row"><span>Parmezaan</span><span class="amt">klein beetje</span></div>
+<div class="prep">Pasta koken. Gehakt en groenten bakken, passata toevoegen en mengen met de pasta.</div></div></div>
+<div class="meal"><div class="mh"><b>Snack · Kwark + fruit</b><span class="kcal">±300–350 kcal</span></div><div class="body">
+<div class="row"><span>Magere kwark</span><span class="amt">250 g</span></div><div class="row"><span>Fruit</span><span class="amt">1 portie</span></div><div class="row"><span>Honing</span><span class="amt">klein beetje</span></div>
+<div class="prep">Alles mengen. Houd de honing klein als je rond het dagtotaal wilt blijven.</div></div></div>
+<div class="total"><span>Dagtotaal</span><span>±2200 kcal</span></div>
+</section>
+
+<section class="day">
+<h2 class="daytitle">Dag 3</h2>
+<div class="meal"><div class="mh"><b>Ontbijt · Overnight oats</b><span class="kcal">±500 kcal</span></div><div class="body">
+<div class="row"><span>Havermout</span><span class="amt">50 g</span></div><div class="row"><span>Magere kwark</span><span class="amt">250 g</span></div><div class="row"><span>Halfvolle melk</span><span class="amt">100 ml</span></div><div class="row"><span>Appel</span><span class="amt">1 stuk</span></div><div class="row"><span>Rozijnen</span><span class="amt">15 g</span></div><div class="row"><span>Kaneel</span><span class="amt">naar smaak</span></div>
+<div class="prep">Alles mengen en een nacht in de koelkast zetten.</div></div></div>
+<div class="meal"><div class="mh"><b>Lunch · Volkoren tosti's</b><span class="kcal">±600 kcal</span></div><div class="body">
+<div class="row"><span>Volkoren brood</span><span class="amt">4 sneetjes</span></div><div class="row"><span>Kipfiletbeleg</span><span class="amt">ruime portie</span></div><div class="row"><span>30+ kaas</span><span class="amt">portie</span></div><div class="row"><span>Tomaat</span><span class="amt">naar smaak</span></div><div class="row"><span>Ketchup/light saus</span><span class="amt">kleine portie</span></div>
+<div class="prep">Beleggen en in tosti-ijzer of droge pan krokant bakken.</div></div></div>
+<div class="meal"><div class="mh"><b>Avond · Loaded aardappeltjes met kip</b><span class="kcal">±700 kcal</span></div><div class="body">
+<div class="row"><span>Aardappeltjes</span><span class="amt">300 g</span></div><div class="row"><span>Kipfilet</span><span class="amt">175 g</span></div><div class="row"><span>Salade/groenten</span><span class="amt">ruim</span></div><div class="row"><span>Light kaas</span><span class="amt">30 g</span></div><div class="row"><span>Light knoflooksaus</span><span class="amt">kleine portie</span></div>
+<div class="prep">Aardappeltjes in airfryer/oven bereiden. Kip bakken en alles serveren met groenten, kaas en saus.</div></div></div>
+<div class="meal"><div class="mh"><b>Snack · Protein pudding + banaan</b><span class="kcal">±300–350 kcal</span></div><div class="body">
+<div class="row"><span>Protein pudding</span><span class="amt">1 portie</span></div><div class="row"><span>Banaan</span><span class="amt">1 stuk</span></div>
+<div class="prep">Makkelijk als tussendoortje of na de training.</div></div></div>
+<div class="total"><span>Dagtotaal</span><span>±2200 kcal</span></div>
+</section>
+
+<div class="flex">
+<h2>Flexibel eten</h2>
+<p>Wil je liever flexibel eten? Download dan een calorie-/voedingsapp en houd je voeding daarin bij. Richtlijn: <b>±2200 kcal per dag</b> en ongeveer <b>160 g eiwit</b>.</p>
+<p>Dit is vooral handig als je thuis mee-eet en het avondeten afhankelijk is van wat je ouders koken. Plan bijvoorbeeld ontbijt, lunch en snacks zelf en <b>houd ruimte over voor het avondeten</b>. Voer dat avondeten vervolgens zo goed mogelijk in of maak een realistische schatting.</p>
+<p>Je hoeft niet iedere dag exact op 2200 kcal uit te komen. Kijk vooral naar je gemiddelde over meerdere dagen.</p>
+<p class="small">Praktisch: volg ook je lichaamsgewicht en trainingsprestaties. Dit is bewust een stevige cut; als herstel of prestaties duidelijk verslechteren, moet de intake opnieuw beoordeeld worden.</p>
+</div>
+</main>
+<footer>tal&coaching · voedingsschema Adam</footer>
+<script>
+function showDay(i){
+ document.querySelectorAll('.day').forEach((x,n)=>x.classList.toggle('active',n===i));
+ document.querySelectorAll('.tab').forEach((x,n)=>x.classList.toggle('active',n===i));
+ window.scrollTo({top:document.querySelector('.tabs').offsetTop-10,behavior:'smooth'});
+}
+</script>
+</body></html>
